@@ -51,7 +51,7 @@ public class Categoria {
     public String toString() {
         return "Categoria{" +
                 "denominacion='" + denominacion + '\'' +
-                ", categoriaPadre=" + categoriaPadre +
+
                 ", categorias=" + categorias +
                 ", articulos=" + articulos +
                 '}';
