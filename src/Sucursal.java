@@ -12,11 +12,11 @@ public class Sucursal {
     public Sucursal() {
     }
 
-    public Sucursal(String nombre, Domicilio domicilio, Categoria categoria) {
+    public Sucursal(String nombre, Domicilio domicilio) {
         this.nombre = nombre;
         this.esCasaMartinez = true;
         this.domicilio = domicilio;
-        addCategoria(categoria); ;
+
     }
 
     public String getNombre() {
@@ -69,8 +69,6 @@ public class Sucursal {
     public String toString() {
         return "Sucursal{" +
                 "nombre='" + nombre + '\'' +
-                ", horarioApertura=" + horarioApertura +
-                ", horarioDeCierre=" + horarioDeCierre +
                 ", esCasaMartinez=" + esCasaMartinez +
                 ", domicilio=" + domicilio +
                 ", categorias=" + categorias +

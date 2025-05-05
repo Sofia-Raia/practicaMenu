@@ -3,18 +3,15 @@ import java.util.ArrayList;
 public class Categoria {
     private String denominacion;
     private Categoria categoriaPadre;
-    private ArrayList<Categoria> categorias = new ArrayList<>();
+    private ArrayList<Categoria>subCategorias = new ArrayList<>();
     private ArrayList<Articulo> articulos = new ArrayList<>();
-
-    public Categoria(String denominacion,Categoria categoria, Articulo articulos) {
-        this.denominacion = denominacion;
-       addArticulo(articulos);
-       addCategoria(categoria);
-    }
 
     public Categoria(String denominacion) {
         this.denominacion = denominacion;
+
     }
+
+
 
     public String getDenominacion() {
         return denominacion;
@@ -32,13 +29,13 @@ public class Categoria {
         this.categoriaPadre = categoriaPadre;
     }
 
-    public void addCategoria(Categoria categoria) {
-        categorias.add(categoria);
+    public void addSubCategoria(Categoria categoria) {
+        subCategorias.add(categoria);
         categoria.setCategoriaPadre(this);
     }
     public void removeCategoria(Categoria categoria) {
-        categorias.remove(categoria);
-        categoria.setCategoriaPadre(this);
+        subCategorias.remove(categoria);
+        categoria.setCategoriaPadre(null);
     }
     public void addArticulo(Articulo articulo) {
         articulos.add(articulo);
@@ -51,8 +48,7 @@ public class Categoria {
     public String toString() {
         return "Categoria{" +
                 "denominacion='" + denominacion + '\'' +
-
-                ", categorias=" + categorias +
+                ", Sub-CATEGORIAS=" + subCategorias +
                 ", articulos=" + articulos +
                 '}';
     }

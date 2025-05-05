@@ -5,6 +5,12 @@ public class Domicilio {
     private int cp;
     private Localidad localidad;
 
+    public Domicilio(String calle, int numero, int cp) {
+        this.calle = calle;
+        this.numero = numero;
+        this.cp = cp;
+
+    }
 
     public Domicilio() {
     }

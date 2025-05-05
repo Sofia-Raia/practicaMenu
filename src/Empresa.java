@@ -10,6 +10,12 @@ public class Empresa {
     public Empresa() {
     }
 
+    public Empresa(String nombre, String razonSocial) {
+        this.nombre = nombre;
+        this.razonSocial = razonSocial;
+
+    }
+
     public Empresa(String nombre, String razonSocial, String logo, int cuit, Sucursal sucursal) {
         this.nombre = nombre;
         this.razonSocial = razonSocial;
@@ -61,8 +67,6 @@ public class Empresa {
         return "Empresa{" +
                 "nombre='" + nombre + '\'' +
                 ", razonSocial='" + razonSocial + '\'' +
-                ", logo='" + logo + '\'' +
-                ", cuit=" + cuit +
                 ", sucursales=" + sucursales +
                 '}';
     }

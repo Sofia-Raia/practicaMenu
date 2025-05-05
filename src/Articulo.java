@@ -13,6 +13,13 @@ protected ArrayList<Imagen> imagenes = new ArrayList<>();
 
     }
 
+    public Articulo(String denominacion, String codigo, double precioVenta, boolean habilitado) {
+        this.denominacion = denominacion;
+        this.codigo = codigo;
+        this.precioVenta = precioVenta;
+        this.habilitado = habilitado;
+    }
+
     public String getDenominacion() {
         return denominacion;
     }
